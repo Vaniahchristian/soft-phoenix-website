@@ -6,6 +6,8 @@ import Products from './components/Products';
 import Download from './components/Download';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import './App.css';
+
 
 function App() {
   return (
