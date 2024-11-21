@@ -41,9 +41,9 @@ const Products = () => {
       icon: <FaMobileAlt className="text-3xl text-purple-500" />,
       description: "The latest mobile point-of-sale app.",
       features: [
-        "Mobile payments",
+        "Account management",
         "Cloud sync",
-        "Offline mode",
+        "Inventory Management",
         "Real-time reports"
       ],
       color: "purple"
