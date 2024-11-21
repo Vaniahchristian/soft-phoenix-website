@@ -1,25 +1,33 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Features from './components/Features';
-import Products from './components/Products';
-import Download from './components/Download';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';
+import ReactGA from 'react-ga4';
 
+ReactGA.initialize('YOUR-GA4-ID');
+
+const Features = lazy(() => import('./components/Features'));
+const Products = lazy(() => import('./components/Products'));
+const Download = lazy(() => import('./components/Download'));
+const Contact = lazy(() => import('./components/Contact'));
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Hero />
-      <Features />
-      <Products />
-      <Download />
-      <Contact />
-      <Footer />
-    </div>
+    <HelmetProvider>
+      <div className="App">
+        <Header />
+        <Hero />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Features />
+          <Products />
+          <Download />
+          <Contact />
+        </Suspense>
+        <Footer />
+      </div>
+    </HelmetProvider>
   );
 }
 

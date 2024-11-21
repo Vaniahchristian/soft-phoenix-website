@@ -55,8 +55,8 @@ const Contact = () => {
                   <FaEnvelope className="text-blue-400 text-xl" />
                   <div>
                     <p className="font-medium">Email Us</p>
-                    <a href="mailto:info@softpheonix.com" className="text-blue-400 hover:text-blue-300 transition-colors">
-                      info@softpheonix.com
+                    <a href="mailto:namanyakarim1@gmail.com" className="text-blue-400 hover:text-blue-300 transition-colors">
+                     namanyakarim1@gmail.com
                     </a>
                   </div>
                 </div>
