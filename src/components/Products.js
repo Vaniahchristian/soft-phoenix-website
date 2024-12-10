@@ -98,14 +98,14 @@ const Products = () => {
                   ))}
                 </ul>
 
-                {/* Learn More Button */}
+                {/* Learn More Button 
                 <div className="mt-6">
                   <button 
                     className={`w-full bg-${product.color}-500 text-white py-2 px-4 rounded-lg hover:bg-${product.color}-600 transition-colors duration-300`}
                   >
                     Learn More
-                  </button>
-                </div>
+                  </button> *
+                </div> */}
               </div>
             </div>
           ))}
