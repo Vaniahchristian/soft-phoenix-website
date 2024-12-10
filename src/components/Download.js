@@ -11,7 +11,7 @@ import {
 const Download = () => {
   const posFeatures = [
     "Easy-to-use interface",
-    "Offline capability",
+    "Printer capability",
     "Real-time sync",
     "Inventory management",
     "Sales reporting",
@@ -76,13 +76,11 @@ const Download = () => {
                 </div>
               </div>
               <div className="relative">
-                {/* Add your app screenshot/mockup image here */}
-                <div className="aspect-[9/16] bg-gray-100 rounded-xl overflow-hidden">
-                  {/* Replace with actual image */}
-                  <div className="w-full h-full bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center">
-                    <FaMobileAlt className="text-6xl text-blue-300" />
-                  </div>
-                </div>
+                <img 
+                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&auto=format"
+                  alt="Trade Mate POS App Interface"
+                  className="rounded-xl w-full h-full object-cover shadow-lg"
+                />
               </div>
             </div>
           </div>
@@ -101,13 +99,11 @@ const Download = () => {
           <div className="bg-white rounded-2xl shadow-xl p-8 max-w-4xl mx-auto transform hover:scale-105 transition-transform duration-300">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="order-2 md:order-1">
-                {/* Add your agent app screenshot/mockup image here */}
-                <div className="aspect-[9/16] bg-gray-100 rounded-xl overflow-hidden">
-                  {/* Replace with actual image */}
-                  <div className="w-full h-full bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center">
-                    <FaUserTie className="text-6xl text-green-300" />
-                  </div>
-                </div>
+                <img 
+                  src="https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?w=500&auto=format"
+                  alt="Trade Mate Agent App Interface"
+                  className="rounded-xl w-full h-full object-cover shadow-lg"
+                />
               </div>
               <div className="order-1 md:order-2">
                 <div className="flex items-center gap-3 mb-6">

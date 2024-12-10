@@ -9,6 +9,7 @@ const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const images = [
+    second,
     heroImage, // your existing hero image
     // Add more image imports and paths here
     first,

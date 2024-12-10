@@ -25,36 +25,32 @@ const Header = () => {
 
   return (
     <header 
-      className={`fixed w-full z-50 transition-all duration-300 py-8 ${
+      className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-gray-800/95 backdrop-blur-sm shadow-lg py-2' 
-          : 'bg-gray-800 py-4'
+          ? 'bg-black/40 backdrop-blur-sm shadow-lg py-3' 
+          : 'bg-transparent py-6'
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <a href="/" className="flex items-center space-x-2">
-            {/* Add your logo image here */}
-            <h1 className="text-2xl font-bold text-white">
-              <span className="text-blue-400">Soft</span>Pheonix
+            <h1 className="text-3xl font-bold text-white tracking-tight">
+              <span className="text-blue-400">Soft</span>Phoenix
             </h1>
           </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
-            <ul className="flex space-x-8">
+            <ul className="flex space-x-6">
               {navLinks.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-white hover:text-blue-400 transition-colors flex items-center space-x-1 group"
+                    className="text-gray-200 hover:text-blue-400 transition-colors flex items-center space-x-2 text-sm uppercase tracking-wider font-medium"
                   >
-                    {link.icon && <span className="group-hover:scale-110 transition-transform">{link.icon}</span>}
-                    <span className="relative">
-                      {link.label}
-                      <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-                    </span>
+                    {link.icon && <span className="transform transition-transform hover:scale-110">{link.icon}</span>}
+                    <span>{link.label}</span>
                   </a>
                 </li>
               ))}
@@ -84,7 +80,7 @@ const Header = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-white hover:text-blue-400 transition-colors flex items-center space-x-2 py-2"
+                    className="text-gray-200 hover:text-blue-400 transition-colors flex items-center space-x-2 py-2"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.icon && <span>{link.icon}</span>}
