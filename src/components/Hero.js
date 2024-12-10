@@ -13,7 +13,7 @@ const Hero = () => {
     heroImage, // your existing hero image
     // Add more image imports and paths here
     first,
-    second,
+    
   ];
 
   const nextImage = () => {
