@@ -1,19 +1,66 @@
 import React from 'react';
 import heroImage from '../assets/hero-image.jpg';
-import { FaDownload, FaUserTie, FaArrowRight } from 'react-icons/fa';
+import first from '../assets/1.jpg';
+import second from '../assets/2.jpg';
+import { FaDownload, FaUserTie, FaArrowRight, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { useState } from 'react';
 
 const Hero = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  const images = [
+    heroImage, // your existing hero image
+    // Add more image imports and paths here
+    first,
+    second,
+  ];
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
   return (
     <section className="relative min-h-screen flex items-center">
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={heroImage} 
-          alt="Hero Background" 
-          className="w-full h-full object-cover"
+          src={images[currentImageIndex]} 
+          alt={`Hero Background ${currentImageIndex + 1}`} 
+          className="w-full h-full object-cover transition-opacity duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-900/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30"></div>
         
+        {/* Navigation Arrows */}
+        <button 
+          onClick={prevImage}
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-3 rounded-full transition-all z-20"
+        >
+          <FaChevronLeft className="text-2xl" />
+        </button>
+        <button 
+          onClick={nextImage}
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-3 rounded-full transition-all z-20"
+        >
+          <FaChevronRight className="text-2xl" />
+        </button>
+
+        {/* Image Indicators */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-8 z-20">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentImageIndex(index)}
+              className={`w-2 h-2 rounded-full transition-all ${
+                index === currentImageIndex ? 'bg-white w-4' : 'bg-white/50'
+              }`}
+            />
+          ))}
+        </div>
+
         {/* Animated Shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-blob"></div>
@@ -85,14 +132,15 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <a href="#features" className="text-white/50 hover:text-white transition-colors">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </a>
-      </div>
+      </div>  */}
+
 
       {/* CSS Animations */}
       <style jsx>{`
