@@ -53,7 +53,7 @@ const Footer = () => {
             </li>
             <li className="flex items-center gap-2">
               <FaEnvelope className="text-blue-400" />
-              <a href="mailto:info@softpheonix.com" className="text-gray-300 hover:text-white transition-colors">info@softpheonix.com</a>
+              <a href="mailto:namanyakarim1@gmail.com" className="text-gray-300 hover:text-white transition-colors">namanyakarim1@gmail.com</a>
             </li>
             <li className="flex items-center gap-2">
               <FaMapMarkerAlt className="text-blue-400" />
