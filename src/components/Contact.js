@@ -28,7 +28,7 @@ const Contact = () => {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-pink-500/20 to-yellow-500/20 rounded-full blur-3xl opacity-20 animate-pulse"></div>*/}
 
       <div className="container mx-auto px-4 relative z-10">
-        <h3 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Get in Touch</h3>
+        <h3 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r bg-clip-text ">Get in Touch</h3>
         
         <div className="grid md:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
           {/* Contact Information */}
@@ -101,7 +101,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-medium">Location</p>
-                    <p className="text-gray-300 font-semibold">Kampala, Uganda</p>
+                    <p className="text-blue-600 hover:text-blue-800 font-semibold">Kampala, Uganda</p>
                   </div>
                 </div>
               </div>
